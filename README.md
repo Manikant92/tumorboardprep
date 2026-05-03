@@ -139,14 +139,15 @@ tumorboard/
 
 ### Try It Mode
 ```
-[Screenshot placeholder: Form with 8 fields and Load example dropdown]
-[Screenshot placeholder: Generated case card with Copy button]
+![Try It Mode](screens/screen_tryit.PNG)
+![Try It Mode](screens/screen_tryit1.PNG)
+![Try It Mode](screens/screen_tryit2.PNG)
+![Try It Mode](screens/screen_tryit3.PNG)
 ```
 
 ### Demo Mode
 ```
-[Screenshot placeholder: Guided walkthrough with Case 1/3 indicator]
-[Screenshot placeholder: Auto-advance timer and navigation buttons]
+![Demo Mode](screens/screen_demo.PNG)
 ```
 
 ---
