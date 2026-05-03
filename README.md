@@ -138,17 +138,18 @@ tumorboard/
 ## Screenshots
 
 ### Try It Mode
-```
-![Try It Mode](tumorboardprep/screens/screen_tryit.PNG)
-![Try It Mode](tumorboardprep/screens/screen_tryit1.PNG)
-![Try It Mode](tumorboardprep/screens/screen_tryit2.PNG)
-![Try It Mode](tumorboardprep/screens/screen_tryit3.PNG)
-```
+
+![Try It Mode](screens/screen_tryit.PNG)
+![Try It Mode](screens/screen_tryit1.PNG)
+![Try It Mode](screens/screen_tryit2.PNG)
+![Try It Mode](screens/screen_tryit3.PNG)
+
+
 
 ### Demo Mode
-```
-![Demo Mode](tumorboardprep/screens/screen_demo.PNG)
-```
+
+![Demo Mode](screens/screen_demo.PNG)
+
 
 ---
 
