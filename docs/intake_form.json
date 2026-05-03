@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "name": "TumorBoardCaseIntake",
+  "description": "Form schema for the tumor board case prep app. All fields are free-text paste from EHR / path / NGS / imaging reports. The app sends this object to Granite for synthesis into a 1-page tumor-board card.",
+  "fields": [
+    {
+      "key": "presenter",
+      "label": "Presenter",
+      "type": "text",
+      "required": true,
+      "example": "Dr. M. Patel, Heme/Onc Fellow",
+      "max_length": 80
+    },
+    {
+      "key": "board_date",
+      "label": "Board date",
+      "type": "date",
+      "required": true,
+      "example": "2026-05-06"
+    },
+    {
+      "key": "demographics",
+      "label": "Demographics + comorbidities",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Age, sex, ECOG performance status, smoking history, key comorbidities. One short paragraph.",
+      "example": "68F, never smoker, ECOG 1. PMHx: T2DM (well-controlled, A1c 6.8), prior PE on apixaban, osteopenia."
+    },
+    {
+      "key": "diagnosis",
+      "label": "Diagnosis + staging",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Cancer type, histology, initial stage (TNM/AJCC), date of diagnosis, current stage if different.",
+      "example": "NSCLC, adenocarcinoma. Initial stage IIIB (T3N2M0) diagnosed Sept 2024. Currently stage IV (new liver and bone mets, April 2026)."
+    },
+    {
+      "key": "pathology",
+      "label": "Pathology report",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Paste relevant pathology report excerpts. Include initial biopsy and any re-biopsy.",
+      "max_length": 3000
+    },
+    {
+      "key": "molecular",
+      "label": "Molecular / NGS",
+      "type": "longtext",
+      "required": false,
+      "placeholder": "Paste NGS report excerpts. Include initial profile and any repeat / liquid biopsy.",
+      "max_length": 3000
+    },
+    {
+      "key": "imaging",
+      "label": "Recent imaging",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Paste most recent imaging report(s). Include comparison to prior if available.",
+      "max_length": 3000
+    },
+    {
+      "key": "treatment_timeline",
+      "label": "Treatment timeline",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Chronological bullets: surgeries, chemo regimens with cycles, radiation, targeted/IO, response at each step.",
+      "max_length": 3000
+    },
+    {
+      "key": "current_status_summary",
+      "label": "Current clinical status",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "Current symptoms, recent CBC/CMP/tumor markers, current performance status, anything new since last visit.",
+      "max_length": 2000
+    },
+    {
+      "key": "clinical_question",
+      "label": "Question for the board",
+      "type": "longtext",
+      "required": true,
+      "placeholder": "What decision does the presenter want the board to make? Be specific.",
+      "max_length": 800,
+      "example": "Next-line systemic therapy for EGFR-mutant NSCLC progressing on osimertinib with newly detected MET amplification. Specifically: role of MET inhibitor combination vs platinum-based chemotherapy + IO."
+    }
+  ],
+  "validation": {
+    "min_required_fields_for_synthesis": 6,
+    "graceful_degradation": "If molecular field is empty, output should still be valid; the considerations section should note that molecular profiling may inform decisions if not yet performed."
+  }
+}

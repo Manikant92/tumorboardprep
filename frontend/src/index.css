@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply text-slate-900;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply font-semibold text-slate-900;
+  }
+  
+  .prose h3 {
+    @apply text-lg mt-6 mb-3;
+  }
+  
+  .prose p {
+    @apply my-3;
+  }
+  
+  .prose ul,
+  .prose ol {
+    @apply my-3 ml-6;
+  }
+  
+  .prose li {
+    @apply my-1;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-slate-900;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-slate-300 pl-4 italic text-slate-700;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  button,
+  .no-print {
+    display: none !important;
+  }
+  
+  .result-card {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+  
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
+
+/* Made with Bob */
